@@ -1,13 +1,19 @@
 "use client";
 
+import Alert from "@/components/Alert";
 import Btn from "@/components/Btn";
 import Checkbox from "@/components/Checkbox";
 import Input from "@/components/Input";
 import Label from "@/components/Label";
 import Textarea from "@/components/Textarea";
-import React from "react";
+import React, { useState } from "react";
 
 export default function Home() {
+  const [showAlert, setShowAlert] = useState(true);
+
+  const handleClose = () => {
+    setShowAlert(false);
+  };
   return (
     <main className="flex flex-col bg-slate-50 text-black">
       <div className="bg-blue-500 text-white flex items-center justify-between gap-2 px-4 py-3">
